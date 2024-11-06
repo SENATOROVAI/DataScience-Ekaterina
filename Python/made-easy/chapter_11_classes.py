@@ -840,7 +840,7 @@ class Marks(Student4):
     def outdata(self) -> None:
         """Print name, course and marks of student."""
         super().printdata()
-        print(f"has marks: {", ".join(self._marks)}")
+        print(f"has marks: {','.join(self._marks)}")
 
 
 marks = Marks()
