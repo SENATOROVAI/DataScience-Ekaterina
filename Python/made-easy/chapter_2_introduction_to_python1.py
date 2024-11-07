@@ -1,18 +1,15 @@
 # ---
 # jupyter:
 #   jupytext:
-#     notebook_metadata_filter: -kernelspec
 #     text_representation:
 #       extension: .py
-#       format_name: percent
-#       format_version: '1.3'
+#       format_name: light
+#       format_version: '1.5'
 #       jupytext_version: 1.16.4
 # ---
 
-# %%
 """Introduction to Python."""
 
-# %% [markdown]
 # 1. Что такое Python?
 #
 # Python - это бесплатный интерпретируемый высокоуровневый язык
@@ -414,7 +411,6 @@
 # библиотеки построения графиков - это особенность ядра.
 #
 
-# %% [markdown]
 # """introduction to python."""
 # 1. Что такое Python?
 #
