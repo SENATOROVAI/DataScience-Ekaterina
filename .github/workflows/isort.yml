@@ -15,6 +15,7 @@ on:
   issues:
   pull_request_review:
   pull_request_review_comment:
+
 jobs:
   isort:
     runs-on: ubuntu-latest
@@ -22,15 +23,15 @@ jobs:
     - uses: actions/checkout@v4
     - uses: isort/isort-action@v1
       with:
-          python-version: ${{ matrix.python-version }}
+          python-version: 3.8  # Define a specific Python version or adjust as needed
           allow-prereleases: true
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install isort nbqa
-    - name: isort
+    - name: Run isort
       run: |
-        nbqa isort --check --float-to-top $(git ls-files '*.ipynb')
+        nbqa isort --float-to-top $(git ls-files '*.ipynb' '*.py')
     - name: Commit and push changes
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
@@ -40,5 +41,4 @@ jobs:
         git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}
         git pull
         git add .
-        git commit -m "Convert notebooks to Python scripts"
-        git push
+        git diff --quiet || (git commit -m "Sort imports and apply isort fixes" && git push)
