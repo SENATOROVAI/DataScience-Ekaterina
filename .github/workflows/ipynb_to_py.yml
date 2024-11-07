@@ -44,7 +44,3 @@ jobs:
           git pull
           git add .
           git diff --quiet || (git commit -m "Convert notebooks to Python scripts" && git push)
-
-
-
-          
