@@ -1,17 +1,21 @@
 # ---
 # jupyter:
 #   jupytext:
+#     notebook_metadata_filter: -kernelspec
 #     text_representation:
 #       extension: .py
-#       format_name: light
-#       format_version: '1.5'
+#       format_name: percent
+#       format_version: '1.3'
 #       jupytext_version: 1.16.4
 # ---
 
+# %% [markdown]
 #
 
-"""lesson notes from 22.07.2024г."""
+# %%
+"""Lesson notes from 22.07.2024г."""
 
+# %% [markdown]
 # Урок был посвещен изучению алгоритмов принятия и отправки домашней работы.
 # Для того чтобы принять домашнюю работу необхдимо: зайти на GitHub, нажать на Fetch origin затем нажать на Pull origin. Далее идем в историю.
 # Для того, чтобы отправить домашнюю работу необходимо: зайти на GitHub, нажать на вкладку "Изменения", выделить тему, которую хотим отправить, в поле "Коммиты" записать наименовани е коммита. После в терменале запустить проверку на линтеры, набрав pre-commit run --all-files. Нажать commit to main. Затем нажать на вкладку Push origin, затем нажать на Fetch

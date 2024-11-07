@@ -1,20 +1,19 @@
 # ---
 # jupyter:
 #   jupytext:
+#     notebook_metadata_filter: -kernelspec
 #     text_representation:
 #       extension: .py
-#       format_name: light
-#       format_version: '1.5'
+#       format_name: percent
+#       format_version: '1.3'
 #       jupytext_version: 1.16.4
-#   kernelspec:
-#     display_name: Python 3
-#     language: python
-#     name: python3
 # ---
 
+# %%
 """Функции."""
 
 
+# %% [markdown]
 # 6.1 . Определение функций
 # Первый вопрос, на который нам нужно ответить: что такое функция?
 # В Python функция - это группа связанных операторов, выполняющих определен-
@@ -169,6 +168,7 @@
 # именем, которое связано с ее назначением, т. е. имеет смысл.
 
 
+# %%
 def lemonade_stall(price: int) -> None:
     """Print lemonade content."""
     if price == 50:
@@ -187,23 +187,28 @@ def lemonade_stall(price: int) -> None:
         print("Пожалуйста, заплатите нужную сумму")
 
 
+# %%
 lemonade_stall(80)
 
 
+# %% [markdown]
 # 6.4.2.1. Количество аргументов
 # Когда вы вызываете функцию, ей нужно передать правильное количество аргумен-
 # тов. То есть если у функции определены 2 параметра, вы должны передать ей
 # 2 аргумента, не больше и не меньше.
 
 
+# %%
 def my_name(first_name: str, last_name: str) -> None:
     """Print my_name."""
     print(first_name, last_name)
 
 
+# %%
 my_name("Nilabh", "Nishchhal")
 
 
+# %%
 def fib(number: int) -> list[int]:
     """Generate Fibonacci numbers up to the given number."""
     if number <= 0:
@@ -219,11 +224,13 @@ def fib(number: int) -> list[int]:
     return result  # Возвращаем список чисел Фибоначчи
 
 
+# %%
 limit = 100
 fibonacci_numbers = fib(limit)
 print(f"Fibonacci numbers up to {limit}: {fibonacci_numbers}")
 
 
+# %%
 def fib2(number: int) -> list[int]:
     """Generate Fibonacci numbers up to the given number."""
     result = []
@@ -234,10 +241,12 @@ def fib2(number: int) -> list[int]:
     return result
 
 
+# %%
 # Получаем список чисел Фибоначчи до 100
 print(fib2(100))
 
 
+# %% [markdown]
 # Оператор return возвращает значение из функции. Если после оператора return
 # ничего не указать, возвращается None. Если этот оператор отсутствует в конце
 # функции, тоже возвращается None.
@@ -254,36 +263,44 @@ print(fib2(100))
 # чеством аргументов, чем в ней определено.
 
 
+# %%
 def my_address(city: str, state: str, country: str = "India") -> None:
     """Print address."""
     print("I live in", city, ",", state, ",", country)
 
 
+# %%
 my_address("Mumbai", "Maharashtra")
 
+# %%
 my_address(" Sydney", "New South Wales", "Australia")
 
 
+# %% [markdown]
 # Значение по умолчанию не означает, что это единственное значение, которое мо-
 # жет принимать данный параметр. Вы можете передать в функцию любое другое
 # значение. То есть если при вызове функции вы не указываете для этого
 # аргумента
 # значение, он принимает значение по умолчанию.
 
+# %% [markdown]
 # Если вы не знаете, сколько аргументов будет передано в вашу функцию, добавьте
 # перед именем параметра в определении функции символ *.
 # Таким образом, функция получит кортеж аргументов и сможет соответственно
 # обращаться к элементам кортежа.
 
 
+# %%
 def fruit_basket(*fruit: str) -> None:
     """Print fruts."""
     print(fruit)
 
 
+# %%
 fruit_basket("apple", "grapes", "strawberry")
 
 
+# %%
 def parrot(
     volt: str,
     state: str = "мертв",
@@ -297,6 +314,7 @@ def parrot(
     print("- Он", state, "!")
 
 
+# %%
 parrot("тысяча")  # первый позиционный аргумент
 parrot(volt="тысяча")  # первый именованный аргумент
 parrot(volt="миллион", action="полетит")  # два именованных аргумента
@@ -305,6 +323,7 @@ parrot("миллион", "отправился к праотцам", "прыгн
 parrot("тысячу", state="летает c ангелами")
 
 
+# %% [markdown]
 # Если количество именованных аргументов, передаваемых в функцию, неиз-
 # вестно, можно добавить перед именем параметра в определении функции две
 # звездочки **.
@@ -312,12 +331,14 @@ parrot("тысячу", state="летает c ангелами")
 # получить доступ к его элементам по именам.
 
 
+# %%
 def try_function(*args: str, **kwargs: str) -> None:
     """Print week days."""
     print("args:", args)
     print("kwargs:", kwargs)
 
 
+# %%
 try_function(
     "Monday",
     "Tuesday",
@@ -329,6 +350,7 @@ try_function(
 )
 
 
+# %% [markdown]
 # 6.6. Генераторы
 # Генератор - это функция, возвращающая итератор. То есть эти функции генери-
 # руют объект, который можно перебирать в цикле.
@@ -344,6 +366,7 @@ try_function(
 # последующем вызове или итерации.
 
 
+# %%
 def inclusive_range(*args: int):  # type: ignore
     """Generate function."""
     numargs = len(args)
@@ -367,12 +390,15 @@ def inclusive_range(*args: int):  # type: ignore
         begin += step
 
 
+# %%
 inclusive_range()
 
+# %%
 for item in inclusive_range(25):
     print(item, end=" ")
 
 
+# %% [markdown]
 # 6.7. Резюме
 # 1. Изучила встроенные функции и рассмотрела самые полезные из них.
 # 2. Узнала как определять и вызывать собственные функции.
@@ -380,6 +406,7 @@ for item in inclusive_range(25):
 # 4. Узнала, как можно более эффективно использовать разные аргументы
 # для вызова функции.
 
+# %% [markdown]
 # 6.8.1. Ответьте на вопросы
 # 1. В чем различие между функцией и методом?
 # Ответ:
@@ -429,6 +456,7 @@ for item in inclusive_range(25):
 # аргументов. **kwargs позволяет передавать произвольное количество именованных
 # аргументов (аргументов с ключами).
 
+# %% [markdown]
 # 6.8.2. Правда или ложь
 # 1. Чтобы вернуть значение из функции, нужно использовать оператор return.
 # ПРАВДА
@@ -454,11 +482,14 @@ for item in inclusive_range(25):
 # return.
 # ПРАВДА
 
+# %% [markdown]
 # 6.8.3. Практические задания
 
+# %% [markdown]
 # 1. Напишите функцию, которая проверяет, является ли год високосным.
 
 
+# %%
 def which_years(year: int) -> str:
     """Show leap year."""
     if year % 4 == 0:
@@ -466,14 +497,16 @@ def which_years(year: int) -> str:
     return f"{year} - не високосный год"
 
 
+# %%
 # Пример использования
 year_input = int(input("Введите год: "))
 print(which_years(year_input))  # Выводим результат функции
 
+# %% [markdown]
 # 2. Напишите функцию f(х), возвращающую простые множители любого числа х
 # (пример простых множителей: 36 - [2 2 3 3], 30 - [2 3 5] ).
 
-# +
+# %%
 ex = int(input("1:>"))
 
 
@@ -497,7 +530,7 @@ print(funk(ex))
 # в градусы Фаренгейта. Напишите еще одну функцию для обратного
 # преобразования.
 
-# +
+# %%
 temperature = int(input("1:>"))
 
 
@@ -507,11 +540,10 @@ def converter_c_to_f(celsius: int) -> int:
     return foringate
 
 
-# -
-
+# %%
 print(converter_c_to_f(temperature))
 
-# +
+# %%
 temperature = int(input("2:>"))
 
 
@@ -521,13 +553,13 @@ def converter_f_to_c(foringate: int) -> int:
     return celsius
 
 
-# -
-
+# %%
 print(converter_f_to_c(temperature))
 
+# %% [markdown]
 # 4. Напишите функцию для вычисления факториала любого числа.
 
-# +
+# %%
 num_input = int(input("3:>"))
 
 
@@ -537,11 +569,12 @@ def factorial(number: int) -> int:
 
 
 print(factorial(num_input))
-# -
 
+# %% [markdown]
 # 5. Напишите функцию преобразования любого числа от 1 до 100 в римское число.
 
 
+# %%
 def integer_to_roman(arab_num: int) -> str:
     """Convert integer to roman numeral."""
     # Римские числа с учетом всех возможных значений
@@ -572,11 +605,13 @@ def integer_to_roman(arab_num: int) -> str:
     return res
 
 
+# %%
 print(integer_to_roman(12))
 
+# %% [markdown]
 # 6. Напишите функцию f(х), которая возвращает таблицу умножения числа х.
 
-# +
+# %%
 number1 = int(input("4:>"))
 
 
@@ -589,14 +624,12 @@ def multiplication_table(multi_num: int) -> None:
 
 multiplication_table(number1)
 
-
-# -
-
+# %% [markdown]
 # 7. Напишите функцию, которая принимает в качестве входных данных список и
 # возвращает его перевернутый вариант.
 
 
-# +
+# %%
 def reverse_list(lst: str) -> None:
     """Revers list."""
     rev_list = lst[::-1]
@@ -605,11 +638,11 @@ def reverse_list(lst: str) -> None:
 
 my_list = input("6:>")
 reverse_list(my_list)
-# -
 
+# %% [markdown]
 # 8. Напишите функцию для расчета сложных процентов.
 
-# +
+# %%
 summa = int(input("Сумма"))
 number2 = int(input("Ставка"))
 period = int(input("Лет"))
@@ -624,14 +657,12 @@ def calculate_profit(money: int, rate: int, years: int) -> None:
 
 calculate_profit(summa, number2, period)
 
-
-# -
-
+# %% [markdown]
 # 9. Напишите функцию f(х) , где х - любое 6-значное число, а функция
 # возвращает сумму его цифр.
 
 
-# +
+# %%
 def make_summ(number: str) -> None:
     """Calculate sum."""
     summ = 0
@@ -642,12 +673,12 @@ def make_summ(number: str) -> None:
 
 frase = "456789"
 make_summ(frase)
-# -
 
+# %% [markdown]
 # 10. Напишите функцию, которая проверяет, является ли переданное число
 # простым.
 
-# +
+# %%
 number3 = int(input("5:>"))
 
 
