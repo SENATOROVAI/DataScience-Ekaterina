@@ -12,6 +12,20 @@ repos:
     rev: "24.10.0"
     hooks:
       - id: black
+  - repo: https://github.com/mwouts/jupytext
+    rev: "v1.16.4b"
+    hooks:
+     - id: jupytext
+       entry: jupytext
+       language: python
+       types: [jupyter]
+       args:
+         - --from=ipynb
+         - --sync
+         - --to=py:percent
+         - --opt=notebook_metadata_filter=-kernelspec
+         - --set-formats=ipynb,py:percent
+       exclude: '.*\.md$'
   - repo: https://github.com/nbQA-dev/nbQA
     rev: 1.9.0
     hooks:
