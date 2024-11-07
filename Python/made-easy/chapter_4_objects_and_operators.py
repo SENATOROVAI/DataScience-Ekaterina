@@ -13,6 +13,7 @@
 # ---
 
 # +
+
 """Объекты и операторы в Python."""
 
 
@@ -723,22 +724,19 @@ summ
 # третье число.
 #
 
-# def find_numbers(agv):
-#     num_sum = agv * 3
-#
-#     for x_ in range(num_sum + 1):
-#         for y_ in range(num_sum + 1):
-#             for z_ in range(num_sum + 1):
-#                 if (
-#                     x_ > agv
-#                     and y_ < agv
-#                     and x_ - agv == agv - y_
-#                     and (x_ + y_ + z_) // 3 == agv
-#                 ):
-#                     return z_
-#
-#
-# print(find_numbers(45))
+
+def find_numbers(agv: int) -> int:
+    """Find the third number in the sequence based on the given conditions."""
+    sum_first_two = agv * 2  # x1 + x2 = 90 (выведено из уравнения)
+    x3 = 135 - sum_first_two  # x3 = 135 - (x1 + x2)
+
+    return x3
+
+
+# Вывод результата
+third_number = find_numbers(45)
+print(f"Третье число: {third_number}")
+
 
 # 7. Джон покупает мобильный телефон за 1800 в Калькутте и продает его в Мум-
 # баи с прибылью 25%. Если его накладные расходы составляют 5% от цены
