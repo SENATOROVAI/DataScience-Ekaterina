@@ -37,7 +37,7 @@ jobs:
       run: |
         black --diff --line-length=79 $(git ls-files '*.py' '*.ipynb')
         nbqa black --diff --line-length=79 $(git ls-files '*.py' '*.ipynb')
-
+        
     - name: Commit and push changes
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
@@ -49,3 +49,7 @@ jobs:
         git add .
         git commit -m "Convert notebooks to Python scripts"
         git push
+
+
+
+     
