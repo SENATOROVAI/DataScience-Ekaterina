@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - uses: isort/isort-action@v1
+    - uses: isort/isort-action@v4
       with:
           python-version: ${{ matrix.python-version }}  # Define a specific Python version or adjust as needed
           allow-prereleases: true
