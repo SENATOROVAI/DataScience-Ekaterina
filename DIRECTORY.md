@@ -5,6 +5,8 @@
   * Made-Easy
     * [Chapter 11 Classes](Python/made-easy/chapter_11_classes.ipynb)
     * [Chapter 11 Classes](Python/made-easy/chapter_11_classes.py)
+    * [Chapter 12 Errors And Exception Handling](Python/made-easy/chapter_12_errors_and_exception_handling.ipynb)
+    * [Chapter 12 Errors And Exception Handling](Python/made-easy/chapter_12_errors_and_exception_handling.py)
     * [Chapter 1 Introduction To Data Science And Programming Basics](Python/made-easy/chapter_1_introduction_to_data_science_and_programming_basics.ipynb)
     * [Chapter 1 Introduction To Data Science And Programming Basics](Python/made-easy/chapter_1_introduction_to_data_science_and_programming_basics.py)
     * [Chapter 2 Introduction To Python1](Python/made-easy/chapter_2_introduction_to_python1.ipynb)
@@ -19,6 +21,8 @@
     * [Chapter 6 Functions](Python/made-easy/chapter_6_functions.py)
     * [Chapter 8 Structures And Sequences](Python/made-easy/chapter_8_structures_and_sequences.ipynb)
     * [Chapter 8 Structures And Sequences](Python/made-easy/chapter_8_structures_and_sequences.py)
+    * [Cursor](Python/made-easy/cursor.ipynb)
+    * [Cursor](Python/made-easy/cursor.py)
     * [Test](Python/made-easy/test.ipynb)
     * [Test](Python/made-easy/test.py)
 
