@@ -1,5 +1,8 @@
 
 ## Python
+  * Clean Code
+    * [Chapter 1](Python/clean_code/chapter_1.ipynb)
+    * [Chapter 1](Python/clean_code/chapter_1.py)
   * [Lesson1](Python/lesson1.ipynb)
   * [Lesson1](Python/lesson1.py)
   * Made-Easy
