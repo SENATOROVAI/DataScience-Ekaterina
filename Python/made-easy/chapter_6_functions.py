@@ -1,19 +1,4 @@
-# ---
-# jupyter:
-#   jupytext:
-#     text_representation:
-#       extension: .py
-#       format_name: light
-#       format_version: '1.5'
-#       jupytext_version: 1.16.4
-#   kernelspec:
-#     display_name: Python 3
-#     language: python
-#     name: python3
-# ---
-
 """Функции."""
-
 
 # 6.1 . Определение функций
 # Первый вопрос, на который нам нужно ответить: что такое функция?
@@ -646,6 +631,7 @@ make_summ(frase)
 
 # 10. Напишите функцию, которая проверяет, является ли переданное число
 # простым.
+#
 
 # +
 number3 = int(input("5:>"))

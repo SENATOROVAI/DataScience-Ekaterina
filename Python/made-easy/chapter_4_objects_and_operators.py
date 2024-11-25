@@ -1,17 +1,3 @@
-# ---
-# jupyter:
-#   jupytext:
-#     text_representation:
-#       extension: .py
-#       format_name: light
-#       format_version: '1.5'
-#       jupytext_version: 1.16.4
-#   kernelspec:
-#     display_name: Python 3
-#     language: python
-#     name: python3
-# ---
-
 """Объекты и операторы в Python."""
 
 import keyword
@@ -720,6 +706,7 @@ summ
 # настолько же, насколько второе число меньше среднего значения. Найдите
 # третье число.
 #
+
 
 # +
 def find_numbers(agv: int) -> int:
